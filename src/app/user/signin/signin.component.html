@@ -1,0 +1,41 @@
+<div  fxLayout="column" fxLayoutAlign="center center" class="container-sm">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Sign in User</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <mat-form-field  appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Password" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="example-button-row">
+          <button mat-button>Forget Password?</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-button color="primary">No Password? SignUp</button>
+        </div>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Sign in</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

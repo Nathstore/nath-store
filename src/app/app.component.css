@@ -1,0 +1,22 @@
+.left-content {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+.spacer {
+  flex: 1;
+}
+
+mat-toolbar {
+  background-color: #00796B;
+  color: #BBDEFB;
+}

@@ -1,0 +1,42 @@
+mat-card {
+  max-width: 350px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 8%;
+  width: 300px;
+}
+
+mat-card-header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Assure que le contenu est bien centré verticalement */
+  border: 1px solid #ccc; /* Ajoute une bordure d'une couleur grise autour du header */
+  padding: 10px; /* Optionnel, pour ajouter un peu d'espace intérieur */
+  border-radius: 8%;
+  margin-bottom: 15px;
+  background-color: #00796B;
+  color: #BBDEFB;
+}
+
+
+.container-sm {
+  display: flex;            /* Active Flexbox */
+  flex-direction: column;  /* Aligne les éléments en colonne */
+  align-items: center;     /* Centre les éléments horizontalement */
+  height: 100vh;
+
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.button {
+  background-color: #00796B;
+  color: #BBDEFB;
+}
