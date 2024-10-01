@@ -20,7 +20,7 @@
   <div fxLayout="row wrap" fxLayoutGap="50px grid">
       <div *ngFor="let product of filteredProducts">
         <mat-card class="product-card" (click)="productDetails(product)">
-          <img mat-card-image src="assets/images/{{product.image_url}}" alt="">
+          <img mat-card-image src="assets/images/{{product.imageCover}}" alt="">
           <mat-card-content>
             <mat-card-title>{{product.name}}</mat-card-title>
             <mat-card-subtitle>{{product.price | currency: 'USD'}}</mat-card-subtitle>
