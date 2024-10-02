@@ -20,3 +20,26 @@ mat-toolbar {
   background-color: #00796B;
   color: #BBDEFB;
 }
+
+
+.site-logo {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 30px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.site-title {
+  margin-top: 20px;
+}
+
+img {
+  width: 110px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+}

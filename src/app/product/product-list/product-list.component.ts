@@ -24,8 +24,6 @@ export class ProductListComponent implements OnInit{
 
   ngOnInit(): void {
       this.productService.getProducts().subscribe(data => {
-        console.log('data',data);
-
         this.products = data;
 
         this.filteredProducts = data;
@@ -68,6 +66,7 @@ export class ProductListComponent implements OnInit{
   }
 
   productDetails(product: Product) : void {
-    this.router.navigate(['/product-details',product.id])
+    console.log(product);
+    this.router.navigate(['/product-details',product._id])
   }
 }

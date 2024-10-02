@@ -12,9 +12,14 @@ import { CartModule } from "./cart/cart.module";
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import { UserModule } from './user/user.module';
+// import { AboutusComponent } from './natstore/aboutus/aboutus.component';
+import { NathstoreModule } from './nathstore/nathstore.module';
+import { AdministrationModule } from './administration/administration.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // AboutusComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,9 @@ import { UserModule } from './user/user.module';
     CartModule,
     MatIconModule,
     MatBadgeModule,
-    UserModule
+    UserModule,
+    NathstoreModule,
+    AdministrationModule
 
   ],
   providers: [],
