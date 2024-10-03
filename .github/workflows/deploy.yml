@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --dev --output-path=docs --base-href=/nath-store/
+        run: npm run build -- --prod --output-path=docs --base-href=/nath-store/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
