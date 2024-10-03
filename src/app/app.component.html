@@ -8,18 +8,18 @@
     </div>
 
     <div  class="center-content">
-      <a href="/products" mat-button>Products</a>
-      <a href="aboutus" mat-button>About us</a>
-      <a href="administration" mat-button>Administration</a>
+      <a routerLink="/products" mat-button>Products</a>
+      <a routerLink="/aboutus" mat-button>About us</a>
+      <a routerLink="/administration" mat-button>Administration</a>
     </div>
     <span class="spacer"></span>
-    <a href="/cart" mat-button>
+    <a routerLink="/cart" mat-button>
       <mat-icon matBadge="15" matBadgePosition="above after" matBadgeColor="warn">shopping_cart</mat-icon>
       Cart
     </a>
-    <a href="/signin" mat-button>
+    <a routerLink="/signin" mat-button>
       <mat-icon>person</mat-icon>
-      Login
+      {{login}}
     </a>
   </mat-toolbar-row>
 </mat-toolbar>

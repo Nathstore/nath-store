@@ -6,6 +6,7 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
 import { SigninComponent } from './user/signin/signin.component';
 import { AboutusComponent } from './natstore/aboutus/aboutus.component';
 import { AdministrationComponent } from './administration/administration/administration.component';
+import { authGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'product-details/:id', component: ProductDetailsComponent},
   { path: 'signin', component: SigninComponent},
   { path: 'aboutus', component: AboutusComponent},
-  { path: 'administration', component: AdministrationComponent}
+  { path: 'administration', component: AdministrationComponent,canActivate:[authGuard]}
 ];
 
 @NgModule({

@@ -4,14 +4,15 @@
       <mat-card-title>Sign in User</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+      <div [formGroup]="LoginForm">
         <mat-form-field appearance="outline">
-          <mat-label>Username</mat-label>
-          <input matInput placeholder="Placeholder">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Placeholder" type="email" formControlName="email" required>
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
         <mat-form-field  appearance="outline">
           <mat-label>Enter your password</mat-label>
-          <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Password" />
+          <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Password" id="password" formControlName="password" required />
           <button
             mat-icon-button
             matSuffix
@@ -30,11 +31,10 @@
         <div class="example-button-row">
           <button mat-button color="primary">No Password? SignUp</button>
         </div>
-
-
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary">Sign in</button>
+      <button [disabled]="!LoginForm.valid" type="submit" (click)="signIn()" mat-raised-button color="primary">Sign in</button>
     </mat-card-actions>
   </mat-card>
 
