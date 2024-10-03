@@ -10,7 +10,10 @@
     <div  class="center-content">
       <a routerLink="/products" mat-button>Products</a>
       <a routerLink="/aboutus" mat-button>About us</a>
-      <a routerLink="/administration" mat-button>Administration</a>
+        <!-- Use *ngIf to conditionally show the Administration link -->
+      <a *ngIf="isLogging && role === 'superAdmin'" routerLink="/administration" mat-button>
+        Administration
+      </a>
     </div>
     <span class="spacer"></span>
     <a routerLink="/cart" mat-button>
@@ -28,6 +31,4 @@
   <h1>Nath Store and convenience</h1>
   <h3>With our products for hair, you gonna feel beautiful</h3>
 </div>
-
-
 <router-outlet></router-outlet>
