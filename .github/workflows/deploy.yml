@@ -3,7 +3,7 @@ name: Deploy Angular app to GitHub Pages
 on:
   push:
     branches:
-      - Developement  # Triggers the workflow on push to the main branch
+      - Development  # Triggers the workflow on push to the Development branch
 
 jobs:
   build-deploy:
@@ -16,13 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --prod --output-path=docs --base-href=/nath-store/
+        run: npm run build -- --configuration production --output-path=docs --base-href=/nath-store/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
