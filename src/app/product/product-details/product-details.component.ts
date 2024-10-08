@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductService } from '../product.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-product-details',
@@ -9,7 +10,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product: Product | undefined;
+  editProduct: Product | undefined;
 
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
@@ -17,19 +18,9 @@ export class ProductDetailsComponent implements OnInit {
     const productId = this.route.snapshot.paramMap.get('id');
 
     if(productId) {
-      this.getProductDetails(productId)
+      this.productService.getProductDetails(productId).subscribe(product => {
+        this.editProduct = (product as any).data.product;
+      });
     }
-
   }
-
-
-  getProductDetails(id: string) : void {
-    this.productService.getProductDetails(id).subscribe(product => {
-
-      console.log(product);
-      this.product = product;
-    })
-  }
-
-
 }
