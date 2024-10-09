@@ -10,13 +10,17 @@ import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { OrdersComponent } from './orders/orders.component';
+import { PlanificationComponent } from './planification/planification.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AdministrationComponent,
     ProductsComponent,
     CategoriesComponent,
-    OrdersComponent
+    OrdersComponent,
+    PlanificationComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +28,9 @@ import { OrdersComponent } from './orders/orders.component';
     MatIconModule,
     MatInputModule,
     MatDatepickerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule,
+    MatTableModule
   ]
 
 })

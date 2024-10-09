@@ -7,6 +7,7 @@ import { SigninComponent } from './user/signin/signin.component';
 import { AboutusComponent } from './natstore/aboutus/aboutus.component';
 import { AdministrationComponent } from './administration/administration/administration.component';
 import { authGuard } from './auth.guard';
+import { PlanificationComponent } from './administration/planification/planification.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'product-details/:id', component: ProductDetailsComponent},
   { path: 'signin', component: SigninComponent},
   { path: 'aboutus', component: AboutusComponent},
-  { path: 'administration', component: AdministrationComponent,canActivate:[authGuard]}
+  { path: 'administration', component: AdministrationComponent,canActivate:[authGuard]},
+  { path: 'planification', component: PlanificationComponent},
 ];
 
 @NgModule({
