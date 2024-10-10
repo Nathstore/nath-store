@@ -3,7 +3,7 @@ name: Deploy Angular app to GitHub Pages
 on:
   push:
     branches:
-      - Development  # Triggers the workflow on push to the Development branch
+      - Developement  # Triggers the workflow on push to the Development branch
 
 jobs:
   build-deploy:
