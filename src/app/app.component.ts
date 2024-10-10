@@ -3,6 +3,7 @@ import { SessionService } from './user/session.service';
 import { Session } from './interfaces/session';
 import { IdleService } from './service/idle.service';
 import { AuthentificationService } from './user/authentification.service';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -23,18 +24,21 @@ export class AppComponent implements OnInit {
   constructor(
       private sessionService: SessionService, 
       private idleService: IdleService,
-      private authService: AuthentificationService){}
+      private authService: AuthentificationService,
+      private cdr: ChangeDetectorRef){}
   ngOnInit(): void {
     
     this.sessionService.currentUserSession.subscribe(session => {
-      if(session){
+      if(session && session.fullname && session.role){
         this.userSession = session
         
         this.login = this.userSession.fullname
-      }
-      this.isLogging = this.authService.isAuthenticated();
-      this.role = this.userSession?.role;
-    })
+        this.isLogging = this.authService.isAuthenticated();
+        this.role = this.userSession?.role;
+        
+        this.cdr.detectChanges();
+      } 
+    });
   }
 
   toggleBadgeVisibility() {

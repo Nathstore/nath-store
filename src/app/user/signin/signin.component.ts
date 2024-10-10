@@ -54,7 +54,7 @@ export class SigninComponent {
           if(response && response.token){
             this.sessionService.updateUserSession(response);
             this.router.navigate(['./administration']).then(() => {
-              window.location.reload();
+              // window.location.reload();
               this.LoginForm.reset();
             })
           }
