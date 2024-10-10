@@ -19,7 +19,7 @@
     </div>
     <span class="spacer"></span>
     <a routerLink="/cart" mat-button>
-      <mat-icon matBadge="15" matBadgePosition="above after" matBadgeColor="warn">shopping_cart</mat-icon>
+      <mat-icon matBadge={{cartQuantity}} matBadgePosition="above after" matBadgeColor="warn">shopping_cart</mat-icon>
       Cart
     </a>
     <a routerLink="/signin" mat-button>

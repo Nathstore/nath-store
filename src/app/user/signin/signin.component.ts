@@ -39,7 +39,6 @@ export class SigninComponent {
     ]],
   });
 
-
   async signIn() : Promise<any> {
     if(this.LoginForm.valid){
       const { email, password } = this.LoginForm.value;
@@ -54,7 +53,7 @@ export class SigninComponent {
         next: (response: any) => {
           if(response && response.token){
             this.sessionService.updateUserSession(response);
-            this.router.navigate(['/administration']).then(() => {
+            this.router.navigate(['./administration']).then(() => {
               window.location.reload();
               this.LoginForm.reset();
             })

@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'nath-store';
   hidden = false;
   login = 'Login';
+  cartQuantity : Number = 1;
 
   isLogging : boolean = false;
   role : string | undefined = "";
